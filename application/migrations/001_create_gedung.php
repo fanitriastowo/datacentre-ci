@@ -13,7 +13,7 @@ class Migration_Create_Gedung extends CI_Migration {
 				  `luas` DOUBLE NOT NULL DEFAULT 0,
 				  `lokasi` TEXT NULL,
 				  `jenis_gedung` ENUM(
-				  				'1_LAINTAI', '2_LANTAI', '3_LANTAI', 
+				  				'1_LANTAI', '2_LANTAI', '3_LANTAI', 
 				  				'4_LANTAI', '5_LANTAI', 'LAIN_LAIN') NOT NULL,
 				  PRIMARY KEY (`id`) 
 				  )";
