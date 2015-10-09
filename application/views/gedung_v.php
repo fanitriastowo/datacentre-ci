@@ -38,6 +38,11 @@
 		</table>
 	</div>
 
-<?php $this->load->view('template/js'); ?>
+	<?php $this->load->view('template/js'); ?>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#gedung').addClass('active');
+		});
+	</script>
 </body>
 </html>
