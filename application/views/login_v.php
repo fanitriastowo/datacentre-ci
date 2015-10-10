@@ -10,7 +10,8 @@
 
 		<div class="jumbotron">
 			<h1>Building Datacentre</h1>
-			<p class="lead">Pangkalan Pusat Data bangunan gedung sebagai data utama penentuan prioritas perbaikan</p>
+			<p class="lead">Pangkalan Pusat Data bangunan gedung sebagai data utama penentuan prioritas perbaikan.</p>
+			<h4 class="text-warning">* Silahkan Login untuk mengupdate data gedung</h4>
 			<form class="form-signin">
 				<label for="inputEmail" class="sr-only">Email address</label>
 				<input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
