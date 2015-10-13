@@ -12,13 +12,14 @@
 			<h1>Building Datacentre</h1>
 			<p class="lead">Pangkalan Pusat Data bangunan gedung sebagai data utama penentuan prioritas perbaikan.</p>
 			<h4 class="text-warning">* Silahkan Login untuk mengupdate data gedung</h4>
-			<form class="form-signin">
+
+			<?php echo form_open('login/login', array('class' => 'form-signin')); ?>
 				<label for="inputEmail" class="sr-only">Email address</label>
-				<input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+				<input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
 				<label for="inputPassword" class="sr-only">Password</label>
-				<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+				<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 				<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-			</form>
+			<?php echo form_open(); ?>
 		</div>
 	</div>
 
