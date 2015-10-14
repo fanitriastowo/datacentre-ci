@@ -1,6 +1,6 @@
 <?php 
 
-class Gedung extends CI_Controller {
+class Gedung extends MY_Controller {
 
 	function __construct() {
 		parent::__construct();
