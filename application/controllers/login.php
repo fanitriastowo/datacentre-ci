@@ -7,6 +7,9 @@ class Login extends MY_Controller {
 	}
 
 	public function index(){
+		if ($this->ion_auth->logged_in()) {
+			show_404();
+		}
 		$this->load->view('login_v');
 	}
 

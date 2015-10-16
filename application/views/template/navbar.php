@@ -9,6 +9,7 @@
 			<?php if ($this->ion_auth->is_admin()): ?>
 				<li role="presentation" id="admin_profile"><?php echo anchor('administrator/profile', 'Profile') ?></li>
 				<li role="presentation" id="admin_gedung"><?php echo anchor('administrator/gedung', 'Gedung') ?></li>
+				<li role="presentation" id="admin_user"><?php echo anchor('administrator/user', 'User') ?></li>
 				<li role="presentation" id="admin_logout"><?php echo anchor('login/logout', 'Logout') ?></li>
 			<?php endif ?>
 
