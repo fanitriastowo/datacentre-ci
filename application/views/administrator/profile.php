@@ -7,12 +7,16 @@
 <body>
 	<div class="container">
 	<?php $this->load->view('template/navbar'); ?>
-		<div class="row">
-			Welcome Administrator
-		</div>
+		
+		<h1 class="text-center">Hello</h1>
 
 	</div>
 
 	<?php $this->load->view('template/js'); ?>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#admin_profile').addClass('active');
+		});
+	</script>
 </body>
 </html>
