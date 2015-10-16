@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div class="container">
-
+	<?php $this->load->view('template/navbar'); ?>
 		<div class="row">
 			Welcome Administrator
 		</div>
