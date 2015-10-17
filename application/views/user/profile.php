@@ -6,6 +6,7 @@
 </head>
 <body>
 	<div class="container">
+	<?php $this->load->view('template/navbar'); ?>
 
 		<div class="row">
 			Welcome User
@@ -14,5 +15,10 @@
 	</div>
 
 	<?php $this->load->view('template/js'); ?>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#user_profile').addClass('active');
+		});
+	</script>
 </body>
 </html>
