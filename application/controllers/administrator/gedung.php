@@ -11,4 +11,10 @@ class Gedung extends Admin_Controller {
 		$model['gedungs'] = $this->gedung_m->get();
 		$this->load->view('administrator/gedung', $model);
 	}
+
+	public function delete($id) {
+		$this->gedung_m->delete($id);
+		$this->session->set_flashdata('notif', 'Delete Gedung Successful!');
+		redirect('administrator/gedung');
+	}
 }

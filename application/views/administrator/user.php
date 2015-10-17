@@ -116,16 +116,16 @@
 					<?php echo form_hidden('update_id'); ?>
 					<div class="form-group">
 						<div class="col-sm-6">
-							<?php echo form_input('username', '', 'class="form-control" id="update_username" placeholder="Username"'); ?>
+							<?php echo form_input('username', '', 'class="form-control" id="update_username" placeholder="Username" required'); ?>
 						</div>
 						<div class="col-sm-6">
-							<?php echo form_input('phone', '', 'class="form-control" id="update_phone" placeholder="Nomor Ekstensi"'); ?>
+							<?php echo form_input('phone', '', 'class="form-control" id="update_phone" placeholder="Nomor Ekstensi" required'); ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-12">
-							<?php echo form_input('email', '', 'class="form-control" id="update_email" placeholder="Email"'); ?>
+							<?php echo form_input('email', '', 'class="form-control" id="update_email" placeholder="Email" required'); ?>
 						</div>
 					</div>
 
