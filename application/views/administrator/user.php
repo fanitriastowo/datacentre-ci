@@ -39,7 +39,8 @@
 					<td><?php echo $user->email; ?></td>
 					<td><?php echo $user->phone; ?></td>
 					<td>
-						<a href="#" class="btn btn-xs btn-info">Edit</a>
+						<a href="<?php echo site_url('administrator/user/detail/' . $user->id); ?>" class="btn btn-xs btn-info trigger-update">
+							<i class="fa fa-pencil"></i> Edit</a>
 						<a href="<?php echo site_url('administrator/user/delete/' . $user->id); ?>" class="btn btn-xs btn-danger trigger-delete">
 							<i class="fa fa-trash"></i> Delete</a>
 					</td>
@@ -94,6 +95,51 @@
 	</div>
 	<?php echo form_close(); ?>
 
+	<!-- Update Modal -->
+	<?php echo form_open('administrator/user/update', 'class="form-horizontal"'); ?>
+	<div class="modal fade" id="update_modal" tabindex="-1" role="dialog" aria-labelledby="update_modal_label">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="update_modal_label">Add User</h4>
+				</div>
+				<div class="modal-body">
+					<?php echo form_hidden('update_id'); ?>
+					<div class="form-group">
+						<div class="col-sm-6">
+							<?php echo form_input('username', '', 'class="form-control" id="update_username" placeholder="Username"'); ?>
+						</div>
+						<div class="col-sm-6">
+							<?php echo form_input('phone', '', 'class="form-control" id="update_phone" placeholder="Nomor Ekstensi"'); ?>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-12">
+							<?php echo form_input('email', '', 'class="form-control" id="update_email" placeholder="Email"'); ?>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-6">
+							<?php echo form_password('password', '', 'class="form-control" id="update_password" placeholder="Password"'); ?>
+						</div>
+						<div class="col-sm-6">
+							<?php echo form_password('confirm_password', '', 'class="form-control" id="update_confirm_password" placeholder="Confirm Password"'); ?>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-primary">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php echo form_close(); ?>
+
 	<!-- Modal Remove -->
 	<div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -132,6 +178,18 @@
 			e.preventDefault();
 			$('#modal-delete .btn-delete').attr("href", $(this).attr("href"));
 			$('#modal-delete').modal();
+		});
+
+		$('.trigger-update').click(function(e) {
+			e.preventDefault();
+			var updateURL = $(this).attr("href");
+			$.getJSON(updateURL, function(data) {
+				$('input[name="update_id"]').val(data.id);
+				$('#update_username').val(data.username);
+				$('#update_phone').val(data.phone);
+				$('#update_email').val(data.email);
+			});
+			$('#update_modal').modal();
 		});
 	</script>
 </body>
