@@ -3,6 +3,7 @@
 <head>
 	<?php $this->load->view('template/css'); ?>
 	<title>Daftar Gedung</title>
+	<link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/datatables.bootstrap.min.css'); ?>">
 </head>
 <body>
 	<div class="container">
@@ -18,12 +19,11 @@
 			</div>
 		<?php endif ?>
 
-		<div class="table-responsive">
-		<table class="table table-hover table-striped table-bordered">
+		<table id="gedung_table" class="table table-hover table-striped table-bordered">
 			<thead>
 				<tr>
-					<th>No.</th>
-					<th>Kode</th>
+					<th width="5%">No.</th>
+					<th width="5%">Kode</th>
 					<th>Nama</th>
 					<th>Fungsi</th>
 					<th>Tahun Berdiri</th>
@@ -54,7 +54,6 @@
 				<?php endforeach ?>
 			</tbody>
 		</table>
-		</div>
 	</div>
 
 	<!-- Modal Remove -->
@@ -81,9 +80,14 @@
 	</div>
 
 	<?php $this->load->view('template/js'); ?>
+	<script type="text/javascript" src="<?php echo site_url('assets/js/jquery.datatables.min.js'); ?>"></script>
+	<script type="text/javascript" src="<?php echo site_url('assets/js/datatables.bootstrap.min.js'); ?>"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#admin_gedung').addClass('active');
+			$('#gedung_table').DataTable({
+				"lengthMenu": [ 5, 10 ]
+			});
 		});
 
 		$('.trigger-delete').click(function(e) {
