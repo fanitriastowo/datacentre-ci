@@ -5,6 +5,7 @@
 <!-- Bootstrap -->
 <link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/bootstrap.min.css'); ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/bootstrap-theme.min.css'); ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/font-awesome.min.css'); ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/main.css'); ?>">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
