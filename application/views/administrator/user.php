@@ -18,9 +18,17 @@
 				<strong><?php echo $this->session->flashdata('notif'); ?></strong>
 			</div>
 		<?php endif ?>
+		<?php if (!empty($this->session->flashdata('error'))): ?>
+			<div class="alert alert-danger alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span></button>
+				<strong><?php echo $this->session->flashdata('error'); ?></strong>
+			</div>
+		<?php endif ?>
 
 		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_modal">
 			<i class="fa fa-plus"></i> Add</button> <br><br>
+			
 		<table id="user_table" class="table table-hover table-striped table-bordered">
 			<thead>
 				<tr>
@@ -63,25 +71,25 @@
 					
 					<div class="form-group">
 						<div class="col-sm-6">
-							<?php echo form_input('username', '', 'class="form-control" id="insert_username" placeholder="Username"'); ?>
+							<?php echo form_input('username', '', 'class="form-control" id="insert_username" placeholder="Username" required'); ?>
 						</div>
 						<div class="col-sm-6">
-							<?php echo form_input('phone', '', 'class="form-control" id="insert_phone" placeholder="Nomor Ekstensi"'); ?>
+							<?php echo form_input('phone', '', 'class="form-control" id="insert_phone" placeholder="Nomor Ekstensi" required'); ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-12">
-							<?php echo form_input('email', '', 'class="form-control" id="insert_email" placeholder="Email"'); ?>
+							<?php echo form_input('email', '', 'class="form-control" id="insert_email" placeholder="Email" required'); ?>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-6">
-							<?php echo form_password('password', '', 'class="form-control" id="insert_password" placeholder="Password"'); ?>
+							<?php echo form_password('password', '', 'class="form-control" id="insert_password" placeholder="Password" required'); ?>
 						</div>
 						<div class="col-sm-6">
-							<?php echo form_password('confirm_password', '', 'class="form-control" id="insert_confirm_password" placeholder="Confirm Password"'); ?>
+							<?php echo form_password('confirm_password', '', 'class="form-control" id="insert_confirm_password" placeholder="Confirm Password" required'); ?>
 						</div>
 					</div>
 
