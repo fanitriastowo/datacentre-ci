@@ -40,7 +40,8 @@
 					<td><?php echo $user->phone; ?></td>
 					<td>
 						<a href="#" class="btn btn-xs btn-info">Edit</a>
-						<a href="<?php echo site_url('administrator/user/delete/' . $user->id); ?>" class="btn btn-xs btn-danger">Delete</a>
+						<a href="<?php echo site_url('administrator/user/delete/' . $user->id); ?>" class="btn btn-xs btn-danger trigger-delete">
+							<i class="fa fa-trash"></i> Delete</a>
 					</td>
 				</tr>
 				<?php endforeach ?>
@@ -93,6 +94,29 @@
 	</div>
 	<?php echo form_close(); ?>
 
+	<!-- Modal Remove -->
+	<div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span><span class="sr-only">Tutup</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">Hapus User</h4>
+				</div>
+				<div class="modal-body">
+					<strong>Apakah Anda yakin akan menghapus?</strong>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">
+						<i class="fa fa-times"></i> Cancel</button>
+					<a href="" class="btn btn-danger btn-delete">
+						<i class="fa fa-check-circle"></i> Delete</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<?php $this->load->view('template/js'); ?>
 	<script type="text/javascript" src="<?php echo site_url('assets/js/jquery.datatables.min.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo site_url('assets/js/datatables.bootstrap.min.js'); ?>"></script>
@@ -102,6 +126,12 @@
 			$('#user_table').DataTable({
 				"lengthMenu": [ 5, 10 ]
 			});
+		});
+
+		$('.trigger-delete').click(function(e) {
+			e.preventDefault();
+			$('#modal-delete .btn-delete').attr("href", $(this).attr("href"));
+			$('#modal-delete').modal();
 		});
 	</script>
 </body>

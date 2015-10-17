@@ -4,7 +4,6 @@ class User extends Admin_Controller {
 
 	function __construct() {
 		parent::__construct();
-		$this->load->model('user_m');
 	}
 
 	public function index() {
@@ -24,6 +23,12 @@ class User extends Admin_Controller {
 			);
 		$this->ion_auth->register($username, $password, $email, $data);
 		$this->session->set_flashdata('notif', 'Register new User Successful!');
+		redirect('administrator/user');
+	}
+
+	public function delete($id) {
+		$this->ion_auth->delete_user($id);
+		$this->session->set_flashdata('notif', 'Delete User Successful!');
 		redirect('administrator/user');
 	}
 }
