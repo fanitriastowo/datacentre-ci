@@ -26,8 +26,8 @@
 					<th width="5%">Kode</th>
 					<th>Nama</th>
 					<th>Fungsi</th>
-					<th>Tahun Berdiri</th>
-					<th>Tahun Survey</th>
+					<th width="8%">Tahun Berdiri</th>
+					<th width="8%">Tahun Survey</th>
 					<th>Luas</th>
 					<th>Lokasi</th>
 					<th>Jenis</th>
@@ -43,12 +43,12 @@
 					<td><?php echo $gedung->fungsi; ?></td>
 					<td><?php echo $gedung->tahun_berdiri; ?></td>
 					<td><?php echo $gedung->tahun_survey; ?></td>
-					<td><?php echo $gedung->luas; ?></td>
+					<td><?php echo $gedung->luas; ?> m<sup>2</sup></td>
 					<td><?php echo $gedung->lokasi; ?></td>
 					<td><?php echo $gedung->jenis_gedung; ?></td>
 					<td>
-						<a href="#" class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i>&nbsp; Update</a>
-						<a href="<?php echo site_url('administrator/gedung/delete/' . $gedung->id); ?>" class="btn btn-xs btn-danger trigger-delete"><i class="fa fa-trash"></i>&nbsp; Delete</a>
+						<a title="Update Gedung" href="#" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+						<a title="Delete Gedung" href="<?php echo site_url('administrator/gedung/delete/' . $gedung->id); ?>" class="btn btn-danger trigger-delete"><i class="fa fa-trash"></i></a>
 					</td>
 				</tr>
 				<?php endforeach ?>

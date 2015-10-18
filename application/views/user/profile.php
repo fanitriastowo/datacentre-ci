@@ -17,6 +17,14 @@
 			</div>
 		<?php endif ?>
 
+		<?php if (!empty($this->session->flashdata('error'))): ?>
+			<div class="alert alert-danger alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span></button>
+				<strong><?php echo $this->session->flashdata('error'); ?></strong>
+			</div>
+		<?php endif ?>
+
 		<h1>Form Gedung</h1>
 		<p class="text-warning">*Silahkan inputkan form-form berikut ini. apabila ada kesulitan menginputkan silahkan hubungi Pusat Perencanaan Pengembangan di Ekstensi: <kbd>334</kbd></p>
 		<div class="panel panel-default">
@@ -124,13 +132,13 @@
 			$('#datepicker_tahun_berdiri').datetimepicker({
 				locale : 'id',
 				viewMode : 'years',
-				format : 'DD-MM-YYYY'
+				format : 'YYYY-MM-DD'
 			});
 
 			$('#datepicker_tahun_survey').datetimepicker({
 				locale : 'id',
 				viewMode : 'years',
-				format : 'DD-MM-YYYY'
+				format : 'YYYY-MM-DD'
 			});
 		});
 	</script>

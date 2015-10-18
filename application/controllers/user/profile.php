@@ -31,10 +31,15 @@ class Profile extends User_Controller {
 				'fungsi' => $fungsi,
 				'luas' => $luas
 			);
+		$this->form_validation->set_rules($this->gedung_m->rules);
 
-		$this->gedung_m->save($data);
-
-		$this->session->set_flashdata('notif', 'Insert Gedung Berhasil!');
-		redirect('user/profile');
+		if ($this->form_validation->run() == TRUE) {
+			$this->gedung_m->save($data);
+			$this->session->set_flashdata('notif', 'Insert Gedung Berhasil!');
+			redirect('user/profile');
+		} else {
+			$this->session->set_flashdata('error', validation_errors());
+			redirect('user/profile');
+		}
 	}
 }
