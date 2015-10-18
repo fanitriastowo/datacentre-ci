@@ -1,4 +1,10 @@
-# CodeIgniter 2
+### TODO
+1. Administrator Profile (ganti password)
+2. Detail dan Update gedung untuk administrator
+3. JQuery Validation di menejemen user
+4. JQuery Validation di profile user
+
+### CodeIgniter 2
 Open Source PHP Framework (originally from EllisLab)
 
 For more info, please refer to the user-guide at http://www.codeigniter.com/userguide2/  
