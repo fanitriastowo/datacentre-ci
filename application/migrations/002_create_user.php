@@ -29,7 +29,12 @@ class Migration_Create_user extends CI_Migration {
 				`last_name` varchar(50) DEFAULT NULL,
 				`company` varchar(100) DEFAULT NULL,
 				`phone` varchar(20) DEFAULT NULL,
-				PRIMARY KEY (`id`))";
+				`gedung_id` int(11) DEFAULT NULL,
+				PRIMARY KEY (`id`),
+				KEY gedung_id (gedung_id),
+				CONSTRAINT gedung_id_fk FOREIGN KEY (gedung_id)
+					REFERENCES gedung (id)
+					ON DELETE NO ACTION ON UPDATE NO ACTION)";
 		
 		$user_group = "CREATE TABLE `users_groups` (
 					`id` int(11) unsigned NOT NULL AUTO_INCREMENT,

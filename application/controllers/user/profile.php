@@ -34,7 +34,11 @@ class Profile extends User_Controller {
 		$this->form_validation->set_rules($this->gedung_m->rules);
 
 		if ($this->form_validation->run() == TRUE) {
-			$this->gedung_m->save($data);
+			$gedung_id = $this->gedung_m->save($data);
+			$user = $this->ion_auth->user()->row();
+			$gedung = array('gedung_id' => $gedung_id);
+			$this->ion_auth->update($user->id, $gedung);
+
 			$this->session->set_flashdata('notif', 'Insert Gedung Berhasil!');
 			redirect('user/profile');
 		} else {
