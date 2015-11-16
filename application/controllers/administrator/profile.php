@@ -7,6 +7,7 @@ class Profile extends Admin_Controller {
 	}
 
 	public function index() {
-		$this->load->view('administrator/profile');
+		$model['users'] = $this->ion_auth->users(2)->result();
+		$this->load->view('administrator/profile', $model);
 	}
 }

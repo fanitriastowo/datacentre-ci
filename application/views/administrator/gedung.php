@@ -31,7 +31,7 @@
 					<th>Luas</th>
 					<th>Lokasi</th>
 					<th>Jenis</th>
-					<th>Operasi</th>
+					<th width="10%">Operasi</th>
 				</tr>
 			</thead>
 			<tbody>
