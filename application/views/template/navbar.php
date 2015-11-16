@@ -3,6 +3,7 @@
 		<ul class="nav nav-pills pull-right">
 			<?php if (!$this->ion_auth->logged_in()): ?>
 				<li role="presentation" id="login"><?php echo anchor('', 'Login') ?></li>
+				<li role="presentation" id="alur"><?php echo anchor('alur', 'Alur') ?></li>
 				<li role="presentation" id="gedung"><?php echo anchor('gedung', 'Gedung') ?></li>
 			<?php endif ?>
 
