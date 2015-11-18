@@ -11,16 +11,17 @@ class Profile extends User_Controller {
 		$user = $this->ion_auth->user()->row();
 		$model['gedung'] = $this->gedung_m->get($user->id, TRUE);
 		if (count($model['gedung'])) {
-			$this->load->view('user/profile', $model);
+			$this->load->view('user/user_profile_v', $model);
 		} else {
 			$model['gedung'] = $this->gedung_m->get_new();
-			$this->load->view('user/profile', $model);
+			$this->load->view('user/user_profile_v', $model);
 		}
 	}
 
 	public function insert() {
 		$user = $this->ion_auth->user()->row();
 		$gedung = $this->gedung_m->get($user->id, TRUE);
+		$this->form_validation->set_rules($this->gedung_m->rules);
 
 		// Update
 		if (count($gedung)) {
@@ -34,8 +35,6 @@ class Profile extends User_Controller {
 				'fungsi' => $this->input->post('fungsi'),
 				'luas' => $this->input->post('luas')
 			);
-
-			$this->form_validation->set_rules($this->gedung_m->rules);
 
 			if ($this->form_validation->run() == TRUE) {
 				$this->gedung_m->save($data, $gedung->id);
@@ -59,8 +58,6 @@ class Profile extends User_Controller {
 				'fungsi' => $this->input->post('fungsi'),
 				'luas' => $this->input->post('luas')
 			);
-
-			$this->form_validation->set_rules($this->gedung_m->rules);
 
 			if ($this->form_validation->run() == TRUE) {
 				$this->gedung_m->save_gedung($data);

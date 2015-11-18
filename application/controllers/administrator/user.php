@@ -9,7 +9,7 @@ class User extends Admin_Controller {
 
 	public function index() {
 		$model['users'] = $this->ion_auth->users(2)->result();
-		$this->load->view('administrator/user', $model);
+		$this->load->view('administrator/admin_users_v', $model);
 	}
 
 	public function insert() {

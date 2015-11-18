@@ -26,10 +26,8 @@
 					<th width="5%">Kode</th>
 					<th>Nama</th>
 					<th>Fungsi</th>
-					<th width="8%">Tahun Berdiri</th>
-					<th width="8%">Tahun Survey</th>
-					<th>Luas</th>
-					<th>Lokasi</th>
+					<th width="15%">Tahun Berdiri</th>
+					<th width="15%">Tahun Survey</th>
 					<th>Jenis</th>
 					<th width="10%">Operasi</th>
 				</tr>
