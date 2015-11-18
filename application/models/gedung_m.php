@@ -45,4 +45,23 @@ class Gedung_m extends MY_Model {
 	function __construct() {
 		parent::__construct();
 	}
+
+	public function get_new(){
+		$gedung = new stdClass();
+		$gedung->kode = '';
+		$gedung->nama = '';
+		$gedung->lokasi = '';
+		$gedung->tahun_berdiri = '';
+		$gedung->tahun_survey = '';
+		$gedung->fungsi = '';
+		$gedung->luas = '';
+		return $gedung;
+	}
+
+	public function save_gedung($data) {
+		$this->db->set($data);
+		$this->db->insert($this->_table_name);
+		$id = $this->db->insert_id();
+		return $id;
+	}
 }

@@ -62,8 +62,8 @@ class MY_Model extends CI_Model {
 	|	@param $where = String 																|
 	|	@param $single = TRUE / FALSE 														|
 	\*==========================================================================================*/
-	public function get_by($where, $single = FALSE) {
-		$this->db->where($where);
+	public function get_by($where, $value, $single = FALSE) {
+		$this->db->where($where, $value);
 		return $this->get(NULL, $single);
 	}	
 

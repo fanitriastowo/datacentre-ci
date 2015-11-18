@@ -4,7 +4,7 @@ class Migration_Create_Gedung extends CI_Migration {
 
 	public function up() {
 		$query = "CREATE TABLE `gedung` (
-				  `id` INT(11) unsigned NOT NULL AUTO_INCREMENT,
+				  `id` INT(11) unsigned NOT NULL,
 				  `kode` CHAR(10) NOT NULL,
 				  `nama` VARCHAR(100) NOT NULL,
 				  `fungsi` VARCHAR(45) NULL,

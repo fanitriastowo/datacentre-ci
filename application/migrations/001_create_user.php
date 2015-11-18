@@ -42,7 +42,7 @@ class Migration_Create_user extends CI_Migration {
 					CONSTRAINT `fk_users_groups_users1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
 					CONSTRAINT `fk_users_groups_groups1` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION)";
 		
-		$login_attempt = "CREATE TABLE `login_attempts` (
+		$login_attempts = "CREATE TABLE `login_attempts` (
 					`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
 					`ip_address` varbinary(16) NOT NULL,
 					`login` varchar(100) NOT NULL,
@@ -53,7 +53,7 @@ class Migration_Create_user extends CI_Migration {
 		/*Insert data*/
 		$insert_group = "INSERT INTO `groups` (`id`, `name`, `description`) VALUES
 					(1,'admin','Administrator'),
-					(2,'user','General User')"	;
+					(2,'users','General User')"	;
 
 		$insert_user = "INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES 
 					('1',0x7f000001,'administrator','59beecdf7fc966e2f17fd8f65a4a9aeb09d4a3d4','9462e8eee0','admin@admin.com','',NULL,'1268889823','1268889823','1', 'Admin','istrator','UMP','334')";
@@ -63,15 +63,16 @@ class Migration_Create_user extends CI_Migration {
 		$this->db->query($group);
 		$this->db->query($user);
 		$this->db->query($user_group);
+		$this->db->query($login_attempts);
 
 		$this->db->query($insert_group);
 		$this->db->query($insert_user);
 		$this->db->query($insert_user_group);
 	}
 	public function down(){
+		$this->dbforge->drop_table('users_groups');
 		$this->dbforge->drop_table('groups');
 		$this->dbforge->drop_table('users');
-		$this->dbforge->drop_table('users_groups');
 		$this->dbforge->drop_table('login_attempts');
 	}
 }

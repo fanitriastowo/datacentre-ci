@@ -19,7 +19,7 @@ class User extends Admin_Controller {
 		$password = $this->input->post('password');
 		$confirm_password = $this->input->post('confirm_password');
 		$data = array(
-				'phone' => $phone,
+				'phone' => $phone
 			);
 		$rules = $this->user_m->rules;
 		$this->form_validation->set_rules($rules);

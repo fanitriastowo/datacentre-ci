@@ -14,7 +14,7 @@
 				<li role="presentation" id="admin_logout"><?php echo anchor('login/logout', 'Logout') ?></li>
 			<?php endif ?>
 
-			<?php if ($this->ion_auth->in_group('user')): ?>
+			<?php if ($this->ion_auth->in_group('users')): ?>
 				<li role="presentation" id="user_profile"><?php echo anchor('user/profile', 'Profile') ?></li>
 				<li role="presentation" id="user_logout"><?php echo anchor('login/logout', 'Logout') ?></li>
 			<?php endif ?>
