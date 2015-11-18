@@ -11,21 +11,6 @@
 		
 		<h1 class="text-center">Daftar User</h1>
 
-		<?php if (!empty($this->session->flashdata('notif'))): ?>
-			<div class="alert alert-info alert-dismissible" role="alert">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span></button>
-				<strong><?php echo $this->session->flashdata('notif'); ?></strong>
-			</div>
-		<?php endif ?>
-		<?php if (!empty($this->session->flashdata('error'))): ?>
-			<div class="alert alert-danger alert-dismissible" role="alert">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span></button>
-				<strong><?php echo $this->session->flashdata('error'); ?></strong>
-			</div>
-		<?php endif ?>
-
 		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_modal">
 			<i class="fa fa-plus"></i> Add</button> <br><br>
 			
@@ -174,6 +159,7 @@
 	<?php $this->load->view('template/js'); ?>
 	<script type="text/javascript" src="<?php echo site_url('assets/js/jquery.datatables.min.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo site_url('assets/js/datatables.bootstrap.min.js'); ?>"></script>
+	<script type="text/javascript" src="<?php echo site_url('assets/js/bootstrap-growl.min.js'); ?>"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#admin_user').addClass('active');
@@ -199,6 +185,23 @@
 			});
 			$('#update_modal').modal();
 		});
+
+		<?php if (!empty($this->session->flashdata('notif'))): ?>
+			$.bootstrapGrowl("<?php echo $this->session->flashdata('notif'); ?>", {
+				type: 'info', // (null, 'info', 'danger', 'success')
+				offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
+				align: 'right', // ('left', 'right', or 'center')
+				width: 400 // (integer, or 'auto')
+			});
+		<?php endif ?>
+		<?php if (!empty($this->session->flashdata('error'))): ?>
+			$.bootstrapGrowl("<?php echo $this->session->flashdata('notif'); ?>", {
+				type: 'danger', // (null, 'info', 'danger', 'success')
+				offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
+				align: 'right', // ('left', 'right', or 'center')
+				width: 400 // (integer, or 'auto')
+			});
+		<?php endif ?>
 	</script>
 </body>
 </html>
