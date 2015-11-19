@@ -9,22 +9,6 @@
 	<div class="container">
 	<?php $this->load->view('template/navbar'); ?>
 
-		<?php if (!empty($this->session->flashdata('notif'))): ?>
-			<div class="alert alert-success alert-dismissible text-center" role="alert">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span></button>
-				<strong><?php echo $this->session->flashdata('notif'); ?></strong>
-			</div>
-		<?php endif ?>
-
-		<?php if (!empty($this->session->flashdata('error'))): ?>
-			<div class="alert alert-danger alert-dismissible" role="alert">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span></button>
-				<strong><?php echo $this->session->flashdata('error'); ?></strong>
-			</div>
-		<?php endif ?>
-
 		<h1>Form Gedung</h1>
 		<p class="text-warning">*Silahkan inputkan form-form berikut ini. apabila ada kesulitan menginputkan silahkan hubungi Pusat Perencanaan Pengembangan di Ekstensi: <kbd>334</kbd></p>
 		<div class="panel panel-default">
@@ -125,6 +109,7 @@
 	<script type="text/javascript" src="<?php echo site_url('assets/js/moment.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo site_url('assets/js/moment_id.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo site_url('assets/js/bootstrap-datetimepicker.js'); ?>"></script>
+	<script type="text/javascript" src="<?php echo site_url('assets/js/bootstrap-growl.min.js'); ?>"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#user_profile').addClass('active');
@@ -140,6 +125,23 @@
 				viewMode : 'years',
 				format : 'YYYY-MM-DD'
 			});
+
+			<?php if (!empty($this->session->flashdata('notif'))): ?>
+				$.bootstrapGrowl("<?php echo $this->session->flashdata('notif'); ?>", {
+					type: 'info', // (null, 'info', 'danger', 'success')
+					offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
+					align: 'right', // ('left', 'right', or 'center')
+					width: 400 // (integer, or 'auto')
+				});
+			<?php endif ?>
+			<?php if (!empty($this->session->flashdata('error'))): ?>
+				$.bootstrapGrowl("<?php echo $this->session->flashdata('error'); ?>", {
+					type: 'danger', // (null, 'info', 'danger', 'success')
+					offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
+					align: 'right', // ('left', 'right', or 'center')
+					width: 400 // (integer, or 'auto')
+				});
+			<?php endif ?>
 		});
 	</script>
 </body>

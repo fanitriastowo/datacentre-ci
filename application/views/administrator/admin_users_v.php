@@ -195,7 +195,7 @@
 			});
 		<?php endif ?>
 		<?php if (!empty($this->session->flashdata('error'))): ?>
-			$.bootstrapGrowl("<?php echo $this->session->flashdata('notif'); ?>", {
+			$.bootstrapGrowl("<?php echo $this->session->flashdata('error'); ?>", {
 				type: 'danger', // (null, 'info', 'danger', 'success')
 				offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
 				align: 'right', // ('left', 'right', or 'center')
