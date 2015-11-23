@@ -21,7 +21,7 @@
 		</ul>
 	</nav>
 	<?php if ($this->ion_auth->logged_in()): ?>
-		<h3 class="text-muted">Welcome <?php echo $this->ion_auth->user()->row()->username; ?></h3>
+		<h3 class="text-muted"><?php echo $title; ?></h3>
 	<?php else: ?>
 		<h3 class="text-muted"><a href="<?php echo site_url(''); ?>" style="text-decoration : none">Datacentre</a></h3>
 	<?php endif ?>

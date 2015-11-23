@@ -9,12 +9,13 @@ class Profile extends User_Controller {
 
 	public function index() {
 		$user = $this->ion_auth->user()->row();
-		$model['gedung'] = $this->gedung_m->get($user->id, TRUE);
-		if (count($model['gedung'])) {
-			$this->load->view('user/user_profile_v', $model);
+		$this->global_data['gedung'] = $this->gedung_m->get($user->id, TRUE);
+		$this->global_data['title'] = 'Your Profile';
+		if (count($this->global_data['gedung'])) {
+			$this->load->view('user/user_profile_v', $this->global_data);
 		} else {
-			$model['gedung'] = $this->gedung_m->get_new();
-			$this->load->view('user/user_profile_v', $model);
+			$this->global_data['gedung'] = $this->gedung_m->get_new();
+			$this->load->view('user/user_profile_v', $this->global_data);
 		}
 	}
 

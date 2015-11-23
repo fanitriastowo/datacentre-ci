@@ -9,8 +9,6 @@
 	<div class="container">
 	<?php $this->load->view('template/navbar'); ?>
 
-		<h1>Daftar Gedung</h1>
-
 		<?php if (!empty($this->session->flashdata('notif'))): ?>
 			<div class="alert alert-success alert-dismissible text-center" role="alert">
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">

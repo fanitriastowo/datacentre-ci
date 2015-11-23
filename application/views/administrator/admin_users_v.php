@@ -2,15 +2,13 @@
 <html lang="en">
 <head>
 	<?php $this->load->view('template/css'); ?>
-	<title>Profile</title>
+	<title>Daftar User</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/datatables.bootstrap.min.css'); ?>">
 </head>
 <body>
 	<div class="container">
 	<?php $this->load->view('template/navbar'); ?>
 		
-		<h1 class="text-center">Daftar User</h1>
-
 		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_modal">
 			<i class="fa fa-plus"></i> Add</button> <br><br>
 			
@@ -187,7 +185,7 @@
 		});
 
 		<?php if (!empty($this->session->flashdata('notif'))): ?>
-			$.bootstrapGrowl("<?php echo $this->session->flashdata('notif'); ?>", {
+			$.bootstrapGrowl("<strong><?php echo $this->session->flashdata('notif'); ?></strong>", {
 				type: 'info', // (null, 'info', 'danger', 'success')
 				offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
 				align: 'right', // ('left', 'right', or 'center')
@@ -195,7 +193,7 @@
 			});
 		<?php endif ?>
 		<?php if (!empty($this->session->flashdata('error'))): ?>
-			$.bootstrapGrowl("<?php echo $this->session->flashdata('error'); ?>", {
+			$.bootstrapGrowl("<strong><?php echo $this->session->flashdata('error'); ?></strong>", {
 				type: 'danger', // (null, 'info', 'danger', 'success')
 				offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
 				align: 'right', // ('left', 'right', or 'center')

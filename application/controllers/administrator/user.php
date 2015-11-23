@@ -8,8 +8,9 @@ class User extends Admin_Controller {
 	}
 
 	public function index() {
-		$model['users'] = $this->ion_auth->users(2)->result();
-		$this->load->view('administrator/admin_users_v', $model);
+		$this->global_data['users'] = $this->ion_auth->users(2)->result();
+		$this->global_data['title'] = "Daftar User";
+		$this->load->view('administrator/admin_users_v', $this->global_data);
 	}
 
 	public function insert() {

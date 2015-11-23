@@ -6,9 +6,8 @@
 </head>
 <body>
 	<div class="container">
-	<?php $this->load->view('template/navbar'); ?>
+		<?php $this->load->view('template/navbar'); ?>
 		
-		<h1 class="text-center">Summary</h1>
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<?php if (count($users)): ?>

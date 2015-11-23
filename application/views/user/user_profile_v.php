@@ -9,8 +9,6 @@
 	<div class="container">
 	<?php $this->load->view('template/navbar'); ?>
 
-		<h1>Form Gedung</h1>
-		<p class="text-warning">*Silahkan inputkan form-form berikut ini. apabila ada kesulitan menginputkan silahkan hubungi Pusat Perencanaan Pengembangan di Ekstensi: <kbd>334</kbd></p>
 		<div class="panel panel-default">
 			<div class="panel-body">
 			
@@ -53,7 +51,7 @@
 						</select>
 					</div>
 				</div>
-			</div>
+			</div> <!-- .col-sm-6 -->
 
 			<div class="col-md-6">
 				<div class="form-group">
@@ -90,12 +88,14 @@
 					</div>
 				</div>
 
-				<div class="form-group">
-					<div class="col-sm-offset-7 col-sm-4">
-						<button type="submit" class="btn btn-lg btn-primary btn-block">Simpan</button>
-					</div>
+			</div> <!-- .col-sm-6 -->
+			</div> <!-- .row -->
+			
+			<div class="col-sm-12">
+				<p class="text-warning text-right">*Silahkan inputkan form-form berikut ini. apabila ada kesulitan menginputkan silahkan hubungi Pusat Perencanaan Pengembangan di Ekstensi: <kbd>334</kbd></p>
+				<div class="col-sm-offset-10 col-sm-2">
+					<button type="submit" class="btn btn-lg btn-primary btn-block">Simpan</button>
 				</div>
-			</div>
 			</div>
 	
 			<?php echo form_close(); ?>

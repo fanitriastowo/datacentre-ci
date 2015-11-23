@@ -8,8 +8,9 @@ class Gedung extends Admin_Controller {
 	}
 
 	public function index() {
-		$model['gedungs'] = $this->gedung_m->get();
-		$this->load->view('administrator/admin_gedung_v', $model);
+		$this->global_data['gedungs'] = $this->gedung_m->get();
+		$this->global_data['title'] = "Daftar Gedung";
+		$this->load->view('administrator/admin_gedung_v', $this->global_data);
 	}
 
 	public function delete($id) {
