@@ -4,12 +4,26 @@
 	<?php $this->load->view('template/css'); ?>
 	<title>Profile</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/bootstrap-datetimepicker.min.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/wizard.css'); ?>">
 </head>
 <body>
 	<div class="container">
 	<?php $this->load->view('template/navbar'); ?>
 
 		<div class="panel panel-default">
+			<div class="panel-heading">
+				<ul class="nav nav-tabs">
+					<li><a href="#tab-profile" data-toggle="tab">Profle</a></li>
+					<li><a href="#tab-air" data-toggle="tab">Air</a></li>
+					<li><a href="#tab-atap" data-toggle="tab">Atap</a></li>
+					<li><a href="#tab-kelistrikan" data-toggle="tab">Kelistrikan</a></li>
+					<li><a href="#tab-lantai" data-toggle="tab">Lantai</a></li>
+					<li><a href="#tab-plafon" data-toggle="tab">Plafon</a></li>
+					<li><a href="#tab-pondasi" data-toggle="tab">Pondasi</a></li>
+					<li><a href="#tab-ruangan" data-toggle="tab">Ruangan</a></li>
+					<li><a href="#tab-struktur" data-toggle="tab">Struktur</a></li>
+				</ul>
+			</div>
 			<div class="panel-body">
 			
 			<?php echo form_open('user/profile/insert', 'class="form-horizontal"'); ?>
@@ -41,14 +55,8 @@
 				<div class="form-group">
 					<div class="col-sm-offset-1 col-sm-6">
 						<label for="insert_jenis_gedung" class="control-label">Jenis Gedung</label>
-						<select name="jenis_gedung" class="form-control" id="insert_jenis_gedung">
-							<option value="1_Lantai">1 Lantai</option>
-							<option value="2_Lantai">2 Lantai</option>
-							<option value="3_Lantai">3 Lantai</option>
-							<option value="4_Lantai">4 Lantai</option>
-							<option value="5_Lantai">5 Lantai</option>
-							<option value="6_Lantai">6 Lantai</option>
-						</select>
+						<?php $options = array('1_Lantai' => '1 Lantai','2_Lantai' => '2 Lantai','3_Lantai' => '3 Lantai','4_Lantai' => '4 Lantai','5_Lantai' => '5 Lantai', 'Lain-lain' => 'Lain-lain'); ?>
+						<?php echo form_dropdown('jenis_gedung', $options, $gedung->jenis_gedung, 'class="form-control" id="insert_jenis_gedung"'); ?>
 					</div>
 				</div>
 			</div> <!-- .col-sm-6 -->
@@ -112,6 +120,7 @@
 	<script type="text/javascript" src="<?php echo site_url('assets/js/bootstrap-growl.min.js'); ?>"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
+			$('.nav-tabs a:first').tab('show') // Select first tab
 			$('#user_profile').addClass('active');
 
 			$('#datepicker_tahun_berdiri').datetimepicker({
@@ -127,19 +136,19 @@
 			});
 
 			<?php if (!empty($this->session->flashdata('notif'))): ?>
-				$.bootstrapGrowl("<?php echo $this->session->flashdata('notif'); ?>", {
-					type: 'info', // (null, 'info', 'danger', 'success')
+				$.bootstrapGrowl("<strong><?php echo $this->session->flashdata('notif'); ?></strong>", {
+					type: 'success', // (null, 'info', 'danger', 'success')
 					offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
-					align: 'right', // ('left', 'right', or 'center')
-					width: 400 // (integer, or 'auto')
+					align: 'center', // ('left', 'right', or 'center')
+					width: 500 // (integer, or 'auto')
 				});
 			<?php endif ?>
 			<?php if (!empty($this->session->flashdata('error'))): ?>
-				$.bootstrapGrowl("<?php echo $this->session->flashdata('error'); ?>", {
+				$.bootstrapGrowl("<strong><?php echo $this->session->flashdata('error'); ?></strong>", {
 					type: 'danger', // (null, 'info', 'danger', 'success')
 					offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
-					align: 'right', // ('left', 'right', or 'center')
-					width: 400 // (integer, or 'auto')
+					align: 'center', // ('left', 'right', or 'center')
+					width: 500 // (integer, or 'auto')
 				});
 			<?php endif ?>
 		});
