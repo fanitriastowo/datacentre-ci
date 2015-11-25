@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="container">
-<?php $this->load->view('template/navbar'); ?>
+	<?php $this->load->view('template/navbar'); ?>
 
 	<div class="panel panel-default">
 		<div class="panel-heading">
@@ -27,7 +27,7 @@
 
 			<div class="tab-content">
 				<div class="tab-pane fade" id="tab-profile"><?php $this->load->view('user/fragment/identity_v'); ?></div>
-				<div class="tab-pane fade" id="tab-air">Air</div>
+				<div class="tab-pane fade" id="tab-air"><?php $this->load->view('user/fragment/air_v'); ?></div>
 				<div class="tab-pane fade" id="tab-atap">Atap</div>
 				<div class="tab-pane fade" id="tab-kelistrikan">Kelistrikan</div>
 				<div class="tab-pane fade" id="tab-lantai">Lantai</div>
@@ -49,7 +49,7 @@
 <script type="text/javascript" src="<?php echo site_url('assets/js/bootstrap-growl.min.js'); ?>"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('.nav-tabs a:first').tab('show') // Select first tab
+		$('.nav-tabs a:first').tab('show'); // Select first tab
 		$('#user_profile').addClass('active');
 
 		$('#datepicker_tahun_berdiri').datetimepicker({

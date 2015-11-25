@@ -51,6 +51,7 @@ class Gedung_m extends MY_Model {
 		$gedung->kode = '';
 		$gedung->nama = '';
 		$gedung->lokasi = '';
+		$gedung->jenis_gedung = '1_Lantai';
 		$gedung->tahun_berdiri = '';
 		$gedung->tahun_survey = '';
 		$gedung->fungsi = '';
