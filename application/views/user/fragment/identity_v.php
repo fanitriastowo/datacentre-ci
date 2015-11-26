@@ -57,7 +57,7 @@
 		<div class="form-group">
 			<div class="col-sm-offset-1 col-sm-10">
 				<label for="insert_fungsi" class="control-label">Fungsi</label>
-				<textarea title="Fungsi Gedung" name="fungsi" class="form-control" id="insert_fungsi" placeholder="Fungsi Gedung" rows="3"style="resize : none;"><?php echo $gedung->fungsi; ?></textarea>
+				<textarea title="Fungsi Gedung" name="fungsi" class="form-control" id="insert_fungsi" placeholder="Fungsi Gedung" rows="3" style="resize : none;"><?php echo $gedung->fungsi; ?></textarea>
 			</div>
 		</div>
 

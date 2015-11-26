@@ -23,8 +23,7 @@
 			<div class="form-group">
 				<div class="col-sm-offset-1 col-sm-10">
 					<label for="ipab_kondisi_insert" class="control-label">Kondisi Pipa</label>
-					<?php $options = array('BAIK' => 'Baik','RUSAK_RINGAN' => 'Rusak Ringan','RUSAK_SEDANG' => 'Rusak Sedang','RUSAK_BERAT' => 'Rusak Berat'); ?>
-					<?php echo form_dropdown('ipab_kondisi', $options, $air->i_p_a_b_kondisi, 'class="form-control" id="ipab_kondisi_insert"'); ?>
+					<?php echo form_dropdown('ipab_kondisi', $option_kondisi, $air->i_p_a_b_kondisi, 'class="form-control" id="ipab_kondisi_insert"'); ?>
 				</div>
 			</div>
 		</div>
@@ -46,8 +45,7 @@
 			<div class="form-group">
 				<div class="col-sm-offset-1 col-sm-10">
 					<label for="tangki_air_kondisi_insert" class="control-label">Kondisi Pipa</label>
-					<?php $options = array('BAIK' => 'Baik','RUSAK_RINGAN' => 'Rusak Ringan','RUSAK_SEDANG' => 'Rusak Sedang','RUSAK_BERAT' => 'Rusak Berat'); ?>
-					<?php echo form_dropdown('tangki_air_kondisi', $options, $air->tangki_air_kondisi, 'class="form-control" id="tangki_air_kondisi_insert"'); ?>
+					<?php echo form_dropdown('tangki_air_kondisi', $option_kondisi, $air->tangki_air_kondisi, 'class="form-control" id="tangki_air_kondisi_insert"'); ?>
 				</div>
 			</div>
 		</div>
@@ -69,8 +67,7 @@
 			<div class="form-group">
 				<div class="col-sm-offset-1 col-sm-10">
 					<label for="pompa_kondisi_insert" class="control-label">Kondisi Pompa</label>
-					<?php $options = array('BAIK' => 'Baik','RUSAK_RINGAN' => 'Rusak Ringan','RUSAK_SEDANG' => 'Rusak Sedang','RUSAK_BERAT' => 'Rusak Berat'); ?>
-					<?php echo form_dropdown('pompa_kondisi', $options, $air->pompa_kondisi, 'class="form-control" id="pompa_kondisi_insert"'); ?>
+					<?php echo form_dropdown('pompa_kondisi', $option_kondisi, $air->pompa_kondisi, 'class="form-control" id="pompa_kondisi_insert"'); ?>
 				</div>
 			</div>
 		</div>
@@ -98,8 +95,7 @@
 			<div class="form-group">
 				<div class="col-sm-offset-1 col-sm-10">
 					<label for="kran_kondisi_insert" class="control-label">Kondisi Kran</label>
-					<?php $options = array('BAIK' => 'Baik','RUSAK_RINGAN' => 'Rusak Ringan','RUSAK_SEDANG' => 'Rusak Sedang','RUSAK_BERAT' => 'Rusak Berat'); ?>
-					<?php echo form_dropdown('kran_kondisi', $options, $air->kran_kondisi, 'class="form-control" id="kran_kondisi_insert"'); ?>
+					<?php echo form_dropdown('kran_kondisi', $option_kondisi, $air->kran_kondisi, 'class="form-control" id="kran_kondisi_insert"'); ?>
 				</div>
 			</div>
 		</div>
@@ -129,8 +125,7 @@
 			<div class="form-group">
 				<div class="col-sm-offset-1 col-sm-10">
 					<label for="ground_tank_kondisi_insert" class="control-label">Kondisi Ground Tank</label>
-					<?php $options = array('BAIK' => 'Baik','RUSAK_RINGAN' => 'Rusak Ringan','RUSAK_SEDANG' => 'Rusak Sedang','RUSAK_BERAT' => 'Rusak Berat'); ?>
-					<?php echo form_dropdown('ground_tank_kondisi', $options, $air->ground_tank_kondisi, 'class="form-control" id="ground_tank_kondisi_insert"'); ?>
+					<?php echo form_dropdown('ground_tank_kondisi', $option_kondisi, $air->ground_tank_kondisi, 'class="form-control" id="ground_tank_kondisi_insert"'); ?>
 				</div>
 			</div>
 		</div>
@@ -158,8 +153,7 @@
 			<div class="form-group">
 				<div class="col-sm-offset-1 col-sm-10">
 					<label for="i_a_k_kondisi_insert" class="control-label">Kondisi Instalasi</label>
-					<?php $options = array('BAIK' => 'Baik','RUSAK_RINGAN' => 'Rusak Ringan','RUSAK_SEDANG' => 'Rusak Sedang','RUSAK_BERAT' => 'Rusak Berat'); ?>
-					<?php echo form_dropdown('i_a_k_kondisi', $options, $air->i_a_k_kondisi, 'class="form-control" id="i_a_k_kondisi_insert"'); ?>
+					<?php echo form_dropdown('i_a_k_kondisi', $option_kondisi, $air->i_a_k_kondisi, 'class="form-control" id="i_a_k_kondisi_insert"'); ?>
 				</div>
 			</div>
 		</div>
@@ -187,8 +181,7 @@
 			<div class="form-group">
 				<div class="col-sm-offset-1 col-sm-10">
 					<label for="drainase_kondisi_insert" class="control-label">Kondisi Drainase</label>
-					<?php $options = array('BAIK' => 'Baik','RUSAK_RINGAN' => 'Rusak Ringan','RUSAK_SEDANG' => 'Rusak Sedang','RUSAK_BERAT' => 'Rusak Berat'); ?>
-					<?php echo form_dropdown('drainase_kondisi', $options, $air->drainase_kondisi, 'class="form-control" id="drainase_kondisi_insert"'); ?>
+					<?php echo form_dropdown('drainase_kondisi', $option_kondisi, $air->drainase_kondisi, 'class="form-control" id="drainase_kondisi_insert"'); ?>
 				</div>
 			</div>
 		</div>
@@ -216,8 +209,7 @@
 			<div class="form-group">
 				<div class="col-sm-offset-1 col-sm-10">
 					<label for="water_closed_kondisi_insert" class="control-label">Kondisi Water Closed</label>
-					<?php $options = array('BAIK' => 'Baik','RUSAK_RINGAN' => 'Rusak Ringan','RUSAK_SEDANG' => 'Rusak Sedang','RUSAK_BERAT' => 'Rusak Berat'); ?>
-					<?php echo form_dropdown('water_closed_kondisi', $options, $air->water_closed_kondisi, 'class="form-control" id="water_closed_kondisi_insert"'); ?>
+					<?php echo form_dropdown('water_closed_kondisi', $option_kondisi, $air->water_closed_kondisi, 'class="form-control" id="water_closed_kondisi_insert"'); ?>
 				</div>
 			</div>
 		</div>
