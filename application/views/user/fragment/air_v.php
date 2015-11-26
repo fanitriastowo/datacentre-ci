@@ -1,4 +1,4 @@
-<?php echo form_open('', 'class="form-horizontal"'); ?>
+<?php echo form_open('user/air/insert', 'class="form-horizontal"'); ?>
 
 <div class="row">
 
@@ -50,7 +50,7 @@
 			<div class="form-group">
 				<div class="col-sm-offset-1 col-sm-10">
 					<label for="tangki_air_kondisi_insert" class="control-label">Kondisi Pipa</label>
-					<select name="ipab_kondisi" class="form-control" id="tangki_air_kondisi_insert">
+					<select name="tangki_air_kondisi" class="form-control" id="tangki_air_kondisi_insert">
 						<option value="BAIK">Baik</option>
 						<option value="RUSAK_RINGAN">Rusak Ringan</option>
 						<option value="RUSAK_SEDANG">Rusak Sedang</option>
@@ -77,7 +77,7 @@
 			<div class="form-group">
 				<div class="col-sm-offset-1 col-sm-10">
 					<label for="pompa_kondisi_insert" class="control-label">Kondisi Pompa</label>
-					<select name="ipab_kondisi" class="form-control" id="pompa_kondisi_insert">
+					<select name="pompa_kondisi" class="form-control" id="pompa_kondisi_insert">
 						<option value="BAIK">Baik</option>
 						<option value="RUSAK_RINGAN">Rusak Ringan</option>
 						<option value="RUSAK_SEDANG">Rusak Sedang</option>
@@ -110,7 +110,7 @@
 			<div class="form-group">
 				<div class="col-sm-offset-1 col-sm-10">
 					<label for="kran_kondisi_insert" class="control-label">Kondisi Kran</label>
-					<select name="ipab_kondisi" class="form-control" id="kran_kondisi_insert">
+					<select name="kran_kondisi" class="form-control" id="kran_kondisi_insert">
 						<option value="BAIK">Baik</option>
 						<option value="RUSAK_RINGAN">Rusak Ringan</option>
 						<option value="RUSAK_SEDANG">Rusak Sedang</option>

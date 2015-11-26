@@ -8,37 +8,37 @@ class Gedung_m extends MY_Model {
 		'kode' => array(
 			'field' => 'kode', 
 			'label' => 'Kode',
-			'rules' => 'trim|required|xss_clean|max_length[2]'
+			'rules' => 'trim|xss_clean|max_length[2]'
 		),
 		'nama' => array(
 			'field' => 'nama', 
 			'label' => 'Nama',
-			'rules' => 'trim|required|xss_clean|max_length[100]'
+			'rules' => 'trim|xss_clean|max_length[100]'
 		),
 		'lokasi' => array(
 			'field' => 'lokasi', 
 			'label' => 'Lokasi',
-			'rules' => 'trim|required|xss_clean'
+			'rules' => 'trim|xss_clean'
 		),
 		'tahun_berdiri' => array(
 			'field' => 'tahun_berdiri', 
 			'label' => 'Tahun Berdiri',
-			'rules' => 'trim|required|xss_clean|exact_length[10]'
+			'rules' => 'trim|xss_clean|exact_length[10]'
 		),
 		'tahun_survey' => array(
 			'field' => 'tahun_survey', 
 			'label' => 'Tahun Survey',
-			'rules' => 'trim|required|xss_clean|exact_length[10]'
+			'rules' => 'trim|xss_clean|exact_length[10]'
 		),
 		'fungsi' => array(
 			'field' => 'fungsi', 
 			'label' => 'Fungsi',
-			'rules' => 'trim|required|xss_clean'
+			'rules' => 'trim|xss_clean'
 		),
 		'luas' => array(
 			'field' => 'luas', 
 			'label' => 'Luas',
-			'rules' => 'trim|required|xss_clean|integer'
+			'rules' => 'trim|xss_clean|integer'
 		)
 	);
 
