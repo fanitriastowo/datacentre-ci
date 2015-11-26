@@ -11,7 +11,7 @@
 
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<ul class="nav nav-tabs">
+			<ul class="nav nav-tabs" id="my_tab">
 				<li><a href="#tab-profile" data-toggle="tab">Profle</a></li>
 				<li><a href="#tab-air" data-toggle="tab">Air</a></li>
 				<li><a href="#tab-atap" data-toggle="tab">Atap</a></li>
@@ -49,7 +49,24 @@
 <script type="text/javascript" src="<?php echo site_url('assets/js/bootstrap-growl.min.js'); ?>"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('.nav-tabs a:first').tab('show'); // Select first tab
+		// Select first tab if refresh page
+		// $('.nav-tabs a:first').tab('show'); 
+		
+		$('#my_tab a').click(function (e) {
+			e.preventDefault();
+			$(this).tab('show');
+		});
+
+		 // store the currently selected tab in the hash value
+		$("ul.nav-tabs > li > a").on("shown.bs.tab", function (e) {
+			var id = $(e.target).attr("href").substr(1);
+			window.location.hash = id;
+		});
+
+		  // on load of the page: switch to the currently selected tab
+		var hash = window.location.hash;
+		$('#my_tab a[href="' + hash + '"]').tab('show');
+		
 		$('#user_profile').addClass('active');
 
 		$('#datepicker_tahun_berdiri').datetimepicker({

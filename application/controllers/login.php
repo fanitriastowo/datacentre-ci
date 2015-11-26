@@ -20,7 +20,7 @@ class Login extends MY_Controller {
 			if ($this->ion_auth->is_admin()){
 				redirect('administrator/profile');
 			} else if($this->ion_auth->in_group('users')) {
-				redirect('user/profile');
+				redirect('user/profile#tab-profile');
 			} else {
 				$this->session->set_flashdata('error', TRUE);
 				redirect('login');

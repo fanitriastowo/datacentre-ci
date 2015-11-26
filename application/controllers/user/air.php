@@ -42,10 +42,10 @@ class Air extends User_Controller {
 			if ($this->form_validation->run() == TRUE) {
 				$this->air_m->save($data, $air->id);
 				$this->session->set_flashdata('notif', 'Update Air Berhasil!');
-				redirect('user/profile');
+				redirect('user/profile#tab-air');
 			} else {
 				$this->session->set_flashdata('error', validation_errors());
-				redirect('user/profile');
+				redirect('user/profile#tab-air');
 			}
 			
 		// Insert
@@ -80,10 +80,10 @@ class Air extends User_Controller {
 			if ($this->form_validation->run() == TRUE) {
 				$this->air_m->save_air($data);
 				$this->session->set_flashdata('notif', 'Insert Air Berhasil!');
-				redirect('user/profile');
+				redirect('user/profile#tab-air');
 			} else {
 				$this->session->set_flashdata('error', validation_errors());
-				redirect('user/profile');
+				redirect('user/profile#tab-air');
 			}
 		}
 	}

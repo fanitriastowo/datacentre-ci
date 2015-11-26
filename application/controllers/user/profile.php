@@ -47,10 +47,10 @@ class Profile extends User_Controller {
 			if ($this->form_validation->run() == TRUE) {
 				$this->gedung_m->save($data, $gedung->id);
 				$this->session->set_flashdata('notif', 'Update Gedung Berhasil!');
-				redirect('user/profile');
+				redirect('user/profile#tab-profile');
 			} else {
 				$this->session->set_flashdata('error', validation_errors());
-				redirect('user/profile');
+				redirect('user/profile#tab-profile');
 			}
 
 		// Insert
@@ -71,10 +71,10 @@ class Profile extends User_Controller {
 			if ($this->form_validation->run() == TRUE) {
 				$this->gedung_m->save_gedung($data);
 				$this->session->set_flashdata('notif', 'Insert Gedung Berhasil!');
-				redirect('user/profile');
+				redirect('user/profile#tab-profile');
 			} else {
 				$this->session->set_flashdata('error', validation_errors());
-				redirect('user/profile');
+				redirect('user/profile#tab-profile');
 			}
 		}
 		
