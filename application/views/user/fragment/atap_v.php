@@ -125,7 +125,7 @@
 			<div class="form-group">
 				<div class="col-sm-offset-1 col-sm-10">
 					<label for="ikatan_angin_panjang_insert" class="control-label">Panjang</label>
-					<input type="text" class="form-control" title="Panjang Ikatan Angin" name="ikatang_angin_panjang" id="ikatan_angin_panjang_insert" placeholder="Panjang Ikatan Angin" value="<?php echo $atap->ikatan_angin_panjang; ?>">
+					<input type="text" class="form-control" title="Panjang Ikatan Angin" name="ikatan_angin_panjang" id="ikatan_angin_panjang_insert" placeholder="Panjang Ikatan Angin" value="<?php echo $atap->ikatan_angin_panjang; ?>">
 				</div>
 			</div>
 			<div class="form-group">
