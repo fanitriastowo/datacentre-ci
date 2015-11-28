@@ -8,7 +8,7 @@ class Kelistrikan_m extends MY_Model {
 		'instalasi_kabel_panjang' => array(
 			'field' => 'instalasi_kabel_panjang', 
 			'label' => 'Panjang Instalasi Kabel',
-			'rules' => 'trim|xss_clean|integer'
+			'rules' => 'trim|xss_clean|decimal'
 		),
 		'instalasi_kabel_jenis' => array(
 			'field' => 'instalasi_kabel_jenis', 
@@ -73,7 +73,7 @@ class Kelistrikan_m extends MY_Model {
 		'installasi_kable_LAN_panjang' => array(
 			'field' => 'installasi_kable_LAN_panjang', 
 			'label' => 'Panjang Instalasi Kabel LAN',
-			'rules' => 'trim|xss_clean|integer'
+			'rules' => 'trim|xss_clean|decimal'
 		),
 		'installasi_kable_LAN_kondisi' => array(
 			'field' => 'installasi_kable_LAN_kondisi', 
