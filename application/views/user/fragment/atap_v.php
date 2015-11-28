@@ -199,6 +199,7 @@
 		</div>
 	</div>
 </div> <!-- .col-sm-3 -->
+</div> <!-- .row -->
 
 <div class="col-sm-12">
 	<p class="text-warning text-right">*Silahkan inputkan form-form berikut ini. apabila ada kesulitan menginputkan silahkan hubungi Pusat Perencanaan Pengembangan di Ekstensi: <kbd>334</kbd></p>

@@ -7,14 +7,18 @@ class Profile extends User_Controller {
 		$this->load->model('gedung_m');
 		$this->load->model('air_m');
 		$this->load->model('atap_m');
+		$this->load->model('kelistrikan_m');
 	}
 
 	public function index() {
 		$user = $this->ion_auth->user()->row();
 		$this->global_data['option_kondisi'] = $this->air_m->option_kondisi;
+
 		$this->global_data['gedung'] = $this->gedung_m->get($user->id, TRUE);
 		$this->global_data['air'] = $this->air_m->get($user->id, TRUE);
 		$this->global_data['atap'] = $this->atap_m->get($user->id, TRUE);
+		$this->global_data['kelistrikan'] = $this->kelistrikan_m->get($user->id, TRUE);
+
 		$this->global_data['title'] = 'Your Profile';
 
 		if (!count($this->global_data['gedung'])) {
@@ -27,6 +31,10 @@ class Profile extends User_Controller {
 
 		if (!count($this->global_data['atap'])) {
 			$this->global_data['atap'] = $this->atap_m->get_new();
+		}
+
+		if (!count($this->global_data['kelistrikan'])) {
+			$this->global_data['kelistrikan'] = $this->kelistrikan_m->get_new();
 		}
 
 		$this->load->view('user/user_profile_v', $this->global_data);
