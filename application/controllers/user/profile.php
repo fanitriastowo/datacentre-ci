@@ -8,6 +8,7 @@ class Profile extends User_Controller {
 		$this->load->model('air_m');
 		$this->load->model('atap_m');
 		$this->load->model('kelistrikan_m');
+		$this->load->model('lantai_m');
 	}
 
 	public function index() {
@@ -18,6 +19,7 @@ class Profile extends User_Controller {
 		$this->global_data['air'] = $this->air_m->get($user->id, TRUE);
 		$this->global_data['atap'] = $this->atap_m->get($user->id, TRUE);
 		$this->global_data['kelistrikan'] = $this->kelistrikan_m->get($user->id, TRUE);
+		$this->global_data['lantai'] = $this->lantai_m->get($user->id, TRUE);
 
 		$this->global_data['title'] = 'Your Profile';
 
@@ -35,6 +37,10 @@ class Profile extends User_Controller {
 
 		if (!count($this->global_data['kelistrikan'])) {
 			$this->global_data['kelistrikan'] = $this->kelistrikan_m->get_new();
+		}
+
+		if (!count($this->global_data['lantai'])) {
+			$this->global_data['lantai'] = $this->lantai_m->get_new();
 		}
 
 		$this->load->view('user/user_profile_v', $this->global_data);
