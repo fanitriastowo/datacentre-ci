@@ -8,7 +8,7 @@ class Air_m extends MY_Model {
 		'i_p_a_b_panjang' => array(
 			'field' => 'i_p_a_b_panjang', 
 			'label' => 'Panjang Instalasi Pipa Air Bersih',
-			'rules' => 'trim|xss_clean|decimal'
+			'rules' => 'trim|xss_clean|numeric'
 		),
 		'i_p_a_b_bahan' => array(
 			'field' => 'i_p_a_b_bahan', 
@@ -23,7 +23,7 @@ class Air_m extends MY_Model {
 		'tangki_air_volume' => array(
 			'field' => 'tangki_air_volume', 
 			'label' => 'Volume Tangki Air',
-			'rules' => 'trim|xss_clean|decimal'
+			'rules' => 'trim|xss_clean|numeric'
 		),
 		'tangki_air_kondisi' => array(
 			'field' => 'tangki_air_kondisi', 
@@ -73,7 +73,7 @@ class Air_m extends MY_Model {
 		'i_a_k_panjang' => array(
 			'field' => 'i_a_k_panjang', 
 			'label' => 'Panjang Instalasi Air Kotor',
-			'rules' => 'trim|xss_clean|decimal'
+			'rules' => 'trim|xss_clean|numeric'
 		),
 		'i_a_k_bahan' => array(
 			'field' => 'i_a_k_bahan', 

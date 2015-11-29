@@ -38,7 +38,7 @@ class Gedung_m extends MY_Model {
 		'luas' => array(
 			'field' => 'luas', 
 			'label' => 'Luas',
-			'rules' => 'trim|xss_clean|integer'
+			'rules' => 'trim|xss_clean|numeric'
 		)
 	);
 

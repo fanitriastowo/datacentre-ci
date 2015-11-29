@@ -8,7 +8,7 @@ class Lantai_m extends MY_Model {
 		'keramik_panjang' => array(
 			'field' => 'keramik_panjang', 
 			'label' => 'Panjang Keramik',
-			'rules' => 'trim|xss_clean|decimal'
+			'rules' => 'trim|xss_clean|numeric'
 		),
 		'keramik_bahan' => array(
 			'field' => 'keramik_bahan', 

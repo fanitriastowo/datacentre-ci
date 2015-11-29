@@ -8,7 +8,7 @@ class Atap_m extends MY_Model {
 		'usuk_panjang' => array(
 			'field' => 'usuk_panjang', 
 			'label' => 'Panjang Usuk',
-			'rules' => 'trim|xss_clean|decimal'
+			'rules' => 'trim|xss_clean|numeric'
 		),
 		'usuk_bahan' => array(
 			'field' => 'usuk_bahan', 
@@ -23,7 +23,7 @@ class Atap_m extends MY_Model {
 		'gording_panjang' => array(
 			'field' => 'gording_panjang', 
 			'label' => 'Panjang Gording',
-			'rules' => 'trim|xss_clean|decimal'
+			'rules' => 'trim|xss_clean|numeric'
 		),
 		'gording_bahan' => array(
 			'field' => 'gording_bahan', 
@@ -38,7 +38,7 @@ class Atap_m extends MY_Model {
 		'reng_panjang' => array(
 			'field' => 'reng_panjang', 
 			'label' => 'Panjang Reng',
-			'rules' => 'trim|xss_clean|decimal'
+			'rules' => 'trim|xss_clean|numeric'
 		),
 		'reng_bahan' => array(
 			'field' => 'reng_bahan', 
@@ -53,7 +53,7 @@ class Atap_m extends MY_Model {
 		'kuda_kuda_panjang' => array(
 			'field' => 'kuda_kuda_panjang', 
 			'label' => 'Panjang Kuda Kuda',
-			'rules' => 'trim|xss_clean|decimal'
+			'rules' => 'trim|xss_clean|numeric'
 		),
 		'kuda_kuda_bahan' => array(
 			'field' => 'kuda_kuda_bahan', 
@@ -68,7 +68,7 @@ class Atap_m extends MY_Model {
 		'ikatan_angin_panjang' => array(
 			'field' => 'ikatan_angin_panjang', 
 			'label' => 'Panjang Ikatan Angin',
-			'rules' => 'trim|xss_clean|decimal'
+			'rules' => 'trim|xss_clean|numeric'
 		),
 		'ikatan_angin_bahan' => array(
 			'field' => 'ikatan_angin_bahan', 
@@ -83,7 +83,7 @@ class Atap_m extends MY_Model {
 		'genteng_panjang' => array(
 			'field' => 'genteng_panjang', 
 			'label' => 'Panjang Genteng',
-			'rules' => 'trim|xss_clean|decimal'
+			'rules' => 'trim|xss_clean|numeric'
 		),
 		'genteng_bahan' => array(
 			'field' => 'genteng_bahan', 
@@ -98,7 +98,7 @@ class Atap_m extends MY_Model {
 		'bumbungan_panjang' => array(
 			'field' => 'bumbungan_panjang', 
 			'label' => 'Panjang Bumbungan',
-			'rules' => 'trim|xss_clean|decimal'
+			'rules' => 'trim|xss_clean|numeric'
 		),
 		'bumbungan_bahan' => array(
 			'field' => 'bumbungan_bahan', 
