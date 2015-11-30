@@ -31,7 +31,7 @@
 				<div class="tab-pane fade" id="tab-atap"><?php $this->load->view('user/fragment/atap_v'); ?></div>
 				<div class="tab-pane fade" id="tab-kelistrikan"><?php $this->load->view('user/fragment/kelistrikan_v'); ?></div>
 				<div class="tab-pane fade" id="tab-lantai"><?php $this->load->view('user/fragment/lantai_v'); ?></div>
-				<div class="tab-pane fade" id="tab-plafon">Plafon</div>
+				<div class="tab-pane fade" id="tab-plafon"><?php $this->load->view('user/fragment/plafon_v'); ?></div>
 				<div class="tab-pane fade" id="tab-pondasi">Pondasi</div>
 				<div class="tab-pane fade" id="tab-ruangan">Ruangan</div>
 				<div class="tab-pane fade" id="tab-struktur">Struktur</div>
