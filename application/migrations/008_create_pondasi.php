@@ -15,6 +15,6 @@ class Migration_Create_pondasi extends CI_Migration {
 	}
 
 	public function down(){
-		$this->db_forge->drop_table('pondasi');
+		$this->dbforge->drop_table('pondasi');
 	}
 }
