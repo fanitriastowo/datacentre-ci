@@ -12,6 +12,7 @@ class Profile extends User_Controller {
 		$this->load->model('plafon_m');
 		$this->load->model('pondasi_m');
 		$this->load->model('ruangan_m');
+		$this->load->model('struktur_m');
 	}
 
 	public function index() {
@@ -26,6 +27,7 @@ class Profile extends User_Controller {
 		$this->global_data['plafon'] = $this->plafon_m->get($user->id, TRUE);
 		$this->global_data['pondasi'] = $this->pondasi_m->get($user->id, TRUE);
 		$this->global_data['ruangan'] = $this->ruangan_m->get($user->id, TRUE);
+		$this->global_data['struktur'] = $this->struktur_m->get($user->id, TRUE);
 
 		$this->global_data['title'] = 'Your Profile';
 
@@ -59,6 +61,10 @@ class Profile extends User_Controller {
 
 		if (!count($this->global_data['ruangan'])) {
 			$this->global_data['ruangan'] = $this->ruangan_m->get_new();
+		}
+
+		if (!count($this->global_data['struktur'])) {
+			$this->global_data['struktur'] = $this->struktur_m->get_new();
 		}
 
 		$this->load->view('user/user_profile_v', $this->global_data);

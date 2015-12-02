@@ -34,7 +34,7 @@
 				<div class="tab-pane fade" id="tab-plafon"><?php $this->load->view('user/fragment/plafon_v'); ?></div>
 				<div class="tab-pane fade" id="tab-pondasi"><?php $this->load->view('user/fragment/pondasi_v'); ?></div>
 				<div class="tab-pane fade" id="tab-ruangan"><?php $this->load->view('user/fragment/ruangan_v'); ?></div>
-				<div class="tab-pane fade" id="tab-struktur">Struktur</div>
+				<div class="tab-pane fade" id="tab-struktur"><?php $this->load->view('user/fragment/struktur_v'); ?></div>
 			</div>
 
 		</div> <!-- .panel-body -->
