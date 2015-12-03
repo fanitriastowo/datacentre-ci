@@ -5,7 +5,7 @@ class Migration_Create_lantai extends CI_Migration {
 	public function up(){
 		$query = "CREATE TABLE lantai (
 			id INT(11) unsigned NOT NULL,
-			keramik_panjang DOUBLE,
+			keramik_panjang DOUBLE DEFAULT 0,
 			keramik_bahan VARCHAR(100),
 			keramik_kondisi VARCHAR(100),
 			PRIMARY KEY (id),

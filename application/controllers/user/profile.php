@@ -17,7 +17,7 @@ class Profile extends User_Controller {
 
 	public function index() {
 		$user = $this->ion_auth->user()->row();
-		$this->global_data['option_kondisi'] = $this->air_m->option_kondisi;
+		$this->global_data['option_kondisi'] = $this->gedung_m->option_kondisi;
 
 		$this->global_data['gedung'] = $this->gedung_m->get($user->id, TRUE);
 		$this->global_data['air'] = $this->air_m->get($user->id, TRUE);

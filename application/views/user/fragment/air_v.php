@@ -11,19 +11,19 @@
 			<div class="form-group">
 				<div class="col-sm-offset-1 col-sm-10">
 					<label for="ipab_panjang_insert" class="control-label">Panjang Pipa</label>
-					<input type="text" class="form-control" title="Panjang Instalasi Pipa Air Bersih" name="ipab_panjang" id="ipab_panjang_insert" placeholder="Panjang dalam (m)" value="<?php echo $air->i_p_a_b_panjang; ?>">
+					<input type="text" class="form-control" title="Panjang Instalasi Pipa Air Bersih" name="i_p_a_b_panjang" id="ipab_panjang_insert" placeholder="Panjang dalam (m)" value="<?php echo $air->i_p_a_b_panjang; ?>">
 				</div>
 			</div>
 			<div class="form-group">
 				<div class="col-sm-offset-1 col-sm-10">
 					<label for="ipab_bahan_insert" class="control-label">Bahan Pipa</label>
-					<input type="text" class="form-control" title="Bahan Instalasi Pipa Air Bersih" name="ipab_bahan" id="ipab_bahan_insert" placeholder="Bahan Pipa" value="<?php echo $air->i_p_a_b_bahan; ?>">
+					<input type="text" class="form-control" title="Bahan Instalasi Pipa Air Bersih" name="i_p_a_b_bahan" id="ipab_bahan_insert" placeholder="Bahan Pipa" value="<?php echo $air->i_p_a_b_bahan; ?>">
 				</div>
 			</div>
 			<div class="form-group">
 				<div class="col-sm-offset-1 col-sm-10">
 					<label for="ipab_kondisi_insert" class="control-label">Kondisi Pipa</label>
-					<?php echo form_dropdown('ipab_kondisi', $option_kondisi, $air->i_p_a_b_kondisi, 'class="form-control" id="ipab_kondisi_insert"'); ?>
+					<?php echo form_dropdown('i_p_a_b_bahan', $option_kondisi, $air->i_p_a_b_kondisi, 'class="form-control" id="ipab_kondisi_insert"'); ?>
 				</div>
 			</div>
 		</div>

@@ -5,7 +5,7 @@ class Migration_Create_pondasi extends CI_Migration {
 	public function up(){
 		$query = "CREATE TABLE pondasi (
 			id INT(11) unsigned NOT NULL,
-			sloof_panjang DOUBLE,
+			sloof_panjang DOUBLE DEFAULT 0,
 			sloof_bahan VARCHAR(100),
 			sloof_kondisi VARCHAR(100),
 			PRIMARY KEY (id),

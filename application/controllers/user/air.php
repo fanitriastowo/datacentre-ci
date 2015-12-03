@@ -14,9 +14,9 @@ class Air extends User_Controller {
 		// Update
 		if (count($air)) {
 			$data = array(
-				'i_p_a_b_panjang' => $this->input->post('ipab_panjang'),
-				'i_p_a_b_bahan' => $this->input->post('ipab_bahan'),
-				'i_p_a_b_kondisi' => $this->input->post('ipab_kondisi'),
+				'i_p_a_b_panjang' => $this->input->post('i_p_a_b_panjang'),
+				'i_p_a_b_bahan' => $this->input->post('i_p_a_b_bahan'),
+				'i_p_a_b_kondisi' => $this->input->post('i_p_a_b_kondisi'),
 				'tangki_air_volume' => $this->input->post('tangki_air_volume'),
 				'tangki_air_kondisi' => $this->input->post('tangki_air_kondisi'),
 				'pompa_jumlah' => $this->input->post('pompa_jumlah'),
@@ -52,9 +52,9 @@ class Air extends User_Controller {
 		} else {
 			$data = array(
 				'id' => $user->id,
-				'i_p_a_b_panjang' => $this->input->post('ipab_panjang'),
-				'i_p_a_b_bahan' => $this->input->post('ipab_bahan'),
-				'i_p_a_b_kondisi' => $this->input->post('ipab_kondisi'),
+				'i_p_a_b_panjang' => $this->input->post('i_p_a_b_panjang'),
+				'i_p_a_b_bahan' => $this->input->post('i_p_a_b_bahan'),
+				'i_p_a_b_kondisi' => $this->input->post('i_p_a_b_bahan'),
 				'tangki_air_volume' => $this->input->post('tangki_air_volume'),
 				'tangki_air_kondisi' => $this->input->post('tangki_air_kondisi'),
 				'pompa_jumlah' => $this->input->post('pompa_jumlah'),

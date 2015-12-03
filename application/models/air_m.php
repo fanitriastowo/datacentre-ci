@@ -117,13 +117,6 @@ class Air_m extends MY_Model {
 		)
 	);
 
-	public $option_kondisi = array(
-		'BAIK' => 'Baik',
-		'RUSAK_RINGAN' => 'Rusak Ringan',
-		'RUSAK_SEDANG' => 'Rusak Sedang',
-		'RUSAK_BERAT' => 'Rusak Berat'
-	);
-
 	function __construct() {
 		parent::__construct();
 	}

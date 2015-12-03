@@ -42,6 +42,13 @@ class Gedung_m extends MY_Model {
 		)
 	);
 
+	public $option_kondisi = array(
+		'BAIK' => 'Baik',
+		'RUSAK_RINGAN' => 'Rusak Ringan',
+		'RUSAK_SEDANG' => 'Rusak Sedang',
+		'RUSAK_BERAT' => 'Rusak Berat'
+	);
+
 	function __construct() {
 		parent::__construct();
 	}
@@ -55,7 +62,7 @@ class Gedung_m extends MY_Model {
 		$gedung->tahun_berdiri = '';
 		$gedung->tahun_survey = '';
 		$gedung->fungsi = '';
-		$gedung->luas = '';
+		$gedung->luas = 0;
 		return $gedung;
 	}
 
