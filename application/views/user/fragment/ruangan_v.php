@@ -113,7 +113,10 @@
 		</div>
 	</div>
 </div> <!-- .col-sm-3 -->
+</div> <!-- .row -->
+<hr>
 
+<div class="row">
 <div class="col-md-3">
 	<div class="panel panel-primary">
 		<div class="panel-heading">
@@ -225,7 +228,9 @@
 		</div>
 	</div>
 </div> <!-- .col-sm-3 -->
-
+</div> <!-- .row -->
+<hr>
+<div class="row">
 <div class="col-md-3">
 	<div class="panel panel-primary">
 		<div class="panel-heading">
@@ -303,7 +308,6 @@
 		</div>
 	</div>
 </div> <!-- .col-sm-3 -->
-
 </div> <!-- .row -->
 
 <div class="col-sm-12">
