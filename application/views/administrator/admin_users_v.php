@@ -9,10 +9,14 @@
 	<div class="container">
 	<?php $this->load->view('template/navbar'); ?>
 		
-		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_modal">
-			<i class="fa fa-plus"></i> Add</button> <br><br>
+		<div class="text-center">
+			<h1>Tambah User</h1>
+			<button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#add_modal">
+				<i class="fa fa-plus"></i>&nbsp;Tambah User</button> 
+		</div>
+		<hr>
 			
-		<table id="user_table" class="table table-hover table-striped table-bordered">
+		<table id="user_table" class="table table-hover table-striped table-bordered" cellspacing="0" width="100%">
 			<thead>
 				<tr>
 					<td width="5%">No.</td>
@@ -48,7 +52,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="add_modal_label">Add User</h4>
+					<h3 class="modal-title" id="add_modal_label">Add User</h3>
 				</div>
 				<div class="modal-body">
 					
@@ -93,7 +97,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="update_modal_label">Add User</h4>
+					<h3 class="modal-title" id="update_modal_label">Edit User</h3>
 				</div>
 				<div class="modal-body">
 					<?php echo form_hidden('update_id'); ?>
@@ -139,7 +143,7 @@
 					<button type="button" class="close" data-dismiss="modal">
 						<span aria-hidden="true">&times;</span><span class="sr-only">Tutup</span>
 					</button>
-					<h4 class="modal-title" id="myModalLabel">Hapus User</h4>
+					<h3 class="modal-title" id="myModalLabel">Hapus User</h3>
 				</div>
 				<div class="modal-body">
 					<strong>Apakah Anda yakin akan menghapus?</strong>

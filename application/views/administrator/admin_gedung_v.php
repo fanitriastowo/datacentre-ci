@@ -39,8 +39,6 @@
 					<td><?php echo $gedung->fungsi; ?></td>
 					<td><?php echo $gedung->tahun_berdiri; ?></td>
 					<td><?php echo $gedung->tahun_survey; ?></td>
-					<td><?php echo $gedung->luas; ?> m<sup>2</sup></td>
-					<td><?php echo $gedung->lokasi; ?></td>
 					<td><?php echo $gedung->jenis_gedung; ?></td>
 					<td>
 						<a title="Update Gedung" href="#" class="btn btn-xs btn-info"><i class="fa fa-list"></i></a>
