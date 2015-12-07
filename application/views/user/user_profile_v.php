@@ -24,7 +24,6 @@
 			</ul>
 		</div>
 		<div class="panel-body">
-
 			<div class="tab-content">
 				<div class="tab-pane fade" id="tab-profile"><?php $this->load->view('user/fragment/identity_v'); ?></div>
 				<div class="tab-pane fade" id="tab-air"><?php $this->load->view('user/fragment/air_v'); ?></div>
@@ -36,7 +35,6 @@
 				<div class="tab-pane fade" id="tab-ruangan"><?php $this->load->view('user/fragment/ruangan_v'); ?></div>
 				<div class="tab-pane fade" id="tab-struktur"><?php $this->load->view('user/fragment/struktur_v'); ?></div>
 			</div>
-
 		</div> <!-- .panel-body -->
 	</div> <!-- .panel -->
 
@@ -49,53 +47,18 @@
 <script type="text/javascript" src="<?php echo site_url('assets/js/bootstrap-growl.min.js'); ?>"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-		// Select first tab if refresh page
-		// $('.nav-tabs a:first').tab('show'); 
-		
-		$('#my_tab a').click(function (e) {
-			e.preventDefault();
-			$(this).tab('show');
-		});
-
-		 // store the currently selected tab in the hash value
-		$("ul.nav-tabs > li > a").on("shown.bs.tab", function (e) {
-			var id = $(e.target).attr("href").substr(1);
-			window.location.hash = id;
-		});
-
-		  // on load of the page: switch to the currently selected tab
+		$('#my_tab a').click(function (e) {e.preventDefault();$(this).tab('show');});
+		$("ul.nav-tabs > li > a").on("shown.bs.tab", function (e) {var id = $(e.target).attr("href").substr(1);window.location.hash = id;});
 		var hash = window.location.hash;
 		$('#my_tab a[href="' + hash + '"]').tab('show');
-		
 		$('#user_profile').addClass('active');
-
-		$('#datepicker_tahun_berdiri').datetimepicker({
-			locale : 'id',
-			viewMode : 'years',
-			format : 'YYYY-MM-DD'
-		});
-
-		$('#datepicker_tahun_survey').datetimepicker({
-			locale : 'id',
-			viewMode : 'years',
-			format : 'YYYY-MM-DD'
-		});
-
+		$('#datepicker_tahun_berdiri').datetimepicker({locale : 'id',viewMode : 'years',format : 'YYYY-MM-DD'});
+		$('#datepicker_tahun_survey').datetimepicker({locale : 'id',viewMode : 'years',format : 'YYYY-MM-DD'});
 		<?php if (!empty($this->session->flashdata('notif'))): ?>
-			$.bootstrapGrowl("<strong><?php echo $this->session->flashdata('notif'); ?></strong>", {
-				type: 'success', // (null, 'info', 'danger', 'success')
-				offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
-				align: 'center', // ('left', 'right', or 'center')
-				width: 500 // (integer, or 'auto')
-			});
+			$.bootstrapGrowl("<strong><?php echo $this->session->flashdata('notif'); ?></strong>", {type: 'success',offset: {from: 'top', amount: 20}, align: 'center',width: 500});
 		<?php endif ?>
 		<?php if (!empty($this->session->flashdata('error'))): ?>
-			$.bootstrapGrowl("<strong><?php echo $this->session->flashdata('error'); ?></strong>", {
-				type: 'danger', // (null, 'info', 'danger', 'success')
-				offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
-				align: 'center', // ('left', 'right', or 'center')
-				width: 500 // (integer, or 'auto')
-			});
+			$.bootstrapGrowl("<strong><?php echo $this->session->flashdata('error'); ?></strong>", {type: 'danger',offset: {from: 'top', amount: 20},align: 'center',width: 500});
 		<?php endif ?>
 	});
 </script>
