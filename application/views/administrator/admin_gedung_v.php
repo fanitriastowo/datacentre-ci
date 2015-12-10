@@ -41,7 +41,7 @@
 					<td><?php echo $gedung->tahun_survey; ?></td>
 					<td><?php echo $gedung->jenis_gedung; ?></td>
 					<td>
-						<a title="Update Gedung" href="#" class="btn btn-xs btn-info"><i class="fa fa-list"></i></a>
+						<a title="Detail Gedung" href="#" class="btn btn-xs btn-info"><i class="fa fa-list"></i></a>
 						<a title="Update Gedung" href="#" class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i></a>
 						<a title="Delete Gedung" href="<?php echo site_url('administrator/gedung/delete/' . $gedung->id); ?>" class="btn btn-xs btn-danger trigger-delete"><i class="fa fa-trash"></i></a>
 					</td>
